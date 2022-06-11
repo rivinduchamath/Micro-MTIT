@@ -52,6 +52,7 @@ output
 
 CUSTOMERS
 POST
+http://localhost:8080/customers/saveCustomer
 {
     "name" : 1,
     "address" : 1,
@@ -60,7 +61,7 @@ POST
     "telephone":222222
 }
 GET
-http://localhost:6001/customers/2
+http://localhost:8080/customers/2
 {
     "customerId": 2,
     "name": "1",
