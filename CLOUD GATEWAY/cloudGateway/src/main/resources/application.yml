@@ -20,7 +20,12 @@ spring:
             - Path=/departments/**
           filters:
             - name: CircuitBreaker
-
+        - id: CART-SERVICE
+          uri: lb://CART-SERVICE
+          predicates:
+            - Path=/cart/**
+          filters:
+            - name: CircuitBreaker
 
 management:
   endpoints:

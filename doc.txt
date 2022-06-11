@@ -1,0 +1,117 @@
+USERS 
+
+POST
+http://localhost:8091/users/
+{
+
+    "firstName" : "Kasahhhmal",
+    "lastName" : "1234",
+    "email":"aaa$h.com",
+    "departmentId" : 1
+}
+
+
+GET
+http://localhost:8091/users/1
+Output
+{
+    "user": {
+        "userId": 1,
+        "firstName": "Kasahhhmal",
+        "lastName": "1234",
+        "email": "aaa$h.com",
+        "departmentId": 1
+    },
+    "department": {
+        "departmentId": 1,
+        "departmentName": "Kasamal",
+        "departmentAddress": "1234",
+        "departmentCode": "aaa"
+    }
+}
+
+DEPARTMENT
+POST
+http://localhost:8092/departments/
+{
+    "departmentName" : "Kasamal",
+    "departmentAddress" : "1234",
+    "departmentCode" : "aaa"
+}
+
+
+GET
+http://localhost:8092/departments/1
+output
+{
+    "departmentId": 1,
+    "departmentName": "Kasamal",
+    "departmentAddress": "1234",
+    "departmentCode": "aaa"
+}
+
+CUSTOMERS
+POST
+{
+    "name" : 1,
+    "address" : 1,
+    "date" : "2022-06-11T12:56:13.748+00:00",
+    "age" : 1,
+    "telephone":222222
+}
+GET
+http://localhost:6001/customers/2
+{
+    "customerId": 2,
+    "name": "1",
+    "address": "1",
+    "date": "2022-06-11",
+    "age": 1,
+    "telephone": 222222
+}
+
+CART
+POST
+http://localhost:6000/cart/saveCart/
+
+{
+    "userId" : 1,
+    "itemId" : 1,
+    "qty" : 1,
+    "date" : "2022-06-11T12:56:13.748+00:00"
+}
+
+GET
+http://localhost:6000/cart/1/
+{
+    "cartId": 1,
+    "userId": 1,
+    "itemId": 1,
+    "qty": 1,
+    "date": "2022-06-11"
+}
+
+
+ITEMS
+POST
+http://localhost:6002/items/saveItem/
+{
+    "itemName" : 1,
+    "itemPrice" : 1,
+    "itemQty" : 1,
+    "date" : "2022-06-11T12:56:13.748+00:00",
+    "sellerId": 1
+}
+
+
+GET
+http://localhost:6002/items/1/
+{
+    "itemId": 1,
+    "itemName": "1",
+    "itemPrice": 1.0,
+    "itemQty": 1,
+    "date": "2022-06-11",
+    "sellerId": 1
+}
+
